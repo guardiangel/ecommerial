@@ -1,3 +1,5 @@
+How to set up a new project:
+
 1. Publish sample project
    git clone url
 2. cd app-demo (folder's name of project)
