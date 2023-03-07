@@ -11,3 +11,6 @@ How to set up a new project:
    6.2 Create a repository from github
    7.git remote add origin "remote url address"
    8.git push origin master
+
+Add styled-components
+yarn add styled-components
