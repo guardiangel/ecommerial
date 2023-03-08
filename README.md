@@ -12,5 +12,8 @@ How to set up a new project:
    7.git remote add origin "remote url address"
    8.git push origin master
 
-Add styled-components
+3.Add styled-components
 yarn add styled-components
+
+4. Add Icon style
+   yarn add @material-ui/core @material-ui/icons
