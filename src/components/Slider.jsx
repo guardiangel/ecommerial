@@ -1,5 +1,8 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
+import { useState } from "react";
 import styled from "styled-components";
+
+import { silderItems } from "../data.js";
 
 const Container = styled.div`
   width: 100%;
@@ -32,8 +35,9 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
+  transition: all 1.5s ease;
   transform: translateX(
-    0vw
+    ${(props) => props.slideIndex * -100}vw
   ); //move in horizontal direction, 0vw will display the first image
 `;
 
@@ -76,46 +80,34 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
-  const handleClick = (direction) => {};
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  const handleClick = (direction) => {
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else if (direction === "right") {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    }
+  };
 
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftOutlined />
       </Arrow>{" "}
-      <Wrapper>
-        <Slide bg="f5fafd">
-          <ImageContainer>
-            <Image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" />
-          </ImageContainer>
-          <InfoContainer>
-            <Title>Summer sales</Title>
-            <Description>Get flat 30% off for new arrivals</Description>
-            <Button>Show now</Button>
-          </InfoContainer>
-        </Slide>
-
-        <Slide bg="fcf1ed">
-          <ImageContainer>
-            <Image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" />
-          </ImageContainer>
-          <InfoContainer>
-            <Title>Winter sales</Title>
-            <Description>Get flat 30% off for new arrivals</Description>
-            <Button>Show now</Button>
-          </InfoContainer>
-        </Slide>
-
-        <Slide bg="fbf0f4">
-          <ImageContainer>
-            <Image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" />
-          </ImageContainer>
-          <InfoContainer>
-            <Title>Popular sales</Title>
-            <Description>Get flat 30% off for new arrivals</Description>
-            <Button>Show now</Button>
-          </InfoContainer>
-        </Slide>
+      <Wrapper slideIndex={slideIndex}>
+        {silderItems.map((item) => (
+          <Slide bg={item.bg}>
+            <ImageContainer>
+              <Image src={item.img} />
+            </ImageContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Description>{item.desc}</Description>
+              <Button>Show now</Button>
+            </InfoContainer>
+          </Slide>
+        ))}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowRightOutlined />
