@@ -23,3 +23,21 @@ export const silderItems = [
     bg: "fbf0f4",
   },
 ];
+
+export const categories = [
+  {
+    id: 1,
+    img: "http://g.hiphotos.baidu.com/image/pic/item/55e736d12f2eb938d5277fd5d0628535e5dd6f4a.jpg",
+    title: "Shirt style",
+  },
+  {
+    id: 2,
+    img: "http://e.hiphotos.baidu.com/image/pic/item/4bed2e738bd4b31c1badd5a685d6277f9e2ff81e.jpg",
+    title: "Loungewear love",
+  },
+  {
+    id: 3,
+    img: "http://g.hiphotos.baidu.com/image/pic/item/0d338744ebf81a4c87a3add4d52a6059252da61e.jpg",
+    title: "Jaze style",
+  },
+];
