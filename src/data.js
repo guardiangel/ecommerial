@@ -57,4 +57,16 @@ export const popularProducts = [
     id: 3,
     img: "http://b.hiphotos.baidu.com/image/pic/item/359b033b5bb5c9ea5c0e3c23d139b6003bf3b374.jpg",
   },
+  {
+    id: 4,
+    img: "http://a.hiphotos.baidu.com/image/pic/item/8d5494eef01f3a292d2472199d25bc315d607c7c.jpg",
+  },
+  {
+    id: 5,
+    img: "http://b.hiphotos.baidu.com/image/pic/item/e824b899a9014c08878b2c4c0e7b02087af4f4a3.jpg",
+  },
+  {
+    id: 6,
+    img: "http://g.hiphotos.baidu.com/image/pic/item/6d81800a19d8bc3e770bd00d868ba61ea9d345f2.jpg",
+  },
 ];
