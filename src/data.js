@@ -41,3 +41,20 @@ export const categories = [
     title: "Jaze style",
   },
 ];
+
+export const popularProducts = [
+  {
+    id: 1,
+    img: "http://d.hiphotos.baidu.com/image/pic/item/b58f8c5494eef01f119945cbe2fe9925bc317d2a.jpg",
+  },
+
+  {
+    id: 2,
+    img: "http://h.hiphotos.baidu.com/image/pic/item/902397dda144ad340668b847d4a20cf430ad851e.jpg",
+  },
+
+  {
+    id: 3,
+    img: "http://b.hiphotos.baidu.com/image/pic/item/359b033b5bb5c9ea5c0e3c23d139b6003bf3b374.jpg",
+  },
+];
